@@ -17,29 +17,22 @@ Banco de Dados: MySQL, PostgreSQL, SQLite ou outro compatível com Laravel
 Configuração e Execução
 1. Backend (Laravel)
 Clone o repositório
-bash
-Copiar
-Editar
+
 git clone [URL_DO_SEU_REPOSITORIO]
 cd [pasta_do_backend]
 Instale as dependências
 
-bash
-Copiar
-Editar
+
 composer install
-⚙️ Configure o .env
+Configure o .env
 Copie o exemplo:
 
-bash
-Copiar
-Editar
+
 cp .env.example .env
 Edite as credenciais do banco no .env:
 
 env
-Copiar
-Editar
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -50,30 +43,21 @@ DB_PASSWORD=sua_senha
 Gere a chave da aplicação
 
 Rode as migrações
-bash
-Copiar
-Editar
 php artisan migrate
 Isso criará as tabelas para níveis e desenvolvedores.
 
 Inicie o servidor
-bash
-Copiar
-Editar
 php artisan serve --port=8080
 O backend estará acessível em: http://localhost:8080
 
 2. Frontend (Next.js)
 
 Instale as dependências
-bash
-Copiar
-Editar
 npm install
+criar um arquivo .env.local na pasta pricipal do frontend com:
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
 Inicie o servidor de desenvolvimento
-bash
-Copiar
-Editar
+
 npm run dev
 O frontend estará acessível em: http://localhost:3000
 
